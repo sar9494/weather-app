@@ -159,14 +159,10 @@ function App() {
   };
 
   useEffect(() => {
-    
-  }, [searchValue]);
-  useEffect(() => {
     getWeather();
   }, [selectedCity]);
   useEffect(() => {
     getCities();
-    getWeather();
   }, []);
 
   return (
