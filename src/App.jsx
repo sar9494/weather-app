@@ -29,6 +29,14 @@ function App() {
 
   const onChange = (e) => {
     setSearchValue(e.target.value);
+    const filtered = allCities.filter((el) => {
+      return (
+        el.city
+          .toLocaleLowerCase()
+          .startsWith(e.target.value.toLocaleLowerCase())
+      );
+    });
+    setFilteredCities(filtered);
   };
   const convertData = (data) => {
     const citiesAndCountries = data.flatMap((el) =>
@@ -151,16 +159,7 @@ function App() {
   };
 
   useEffect(() => {
-    const filtered = allCities.filter((el) => {
-      return (
-        searchValue !== "" &&
-        el.city
-          .toLocaleLowerCase()
-          .startsWith(searchValue.toLocaleLowerCase()) &&
-        el
-      );
-    });
-    setFilteredCities(filtered);
+    
   }, [searchValue]);
   useEffect(() => {
     getWeather();
