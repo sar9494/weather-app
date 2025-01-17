@@ -67,15 +67,12 @@ function App() {
       const nightText = result.forecast.forecastday[0].hour[22].condition.text;
       const dayTemprature = result.forecast.forecastday[0].hour[10].temp_c;
       const dayText = result.forecast.forecastday[0].hour[10].condition.text;
-      console.log(chooseImage("night",nightText),);
       
       setWeather({
         dayText: dayText,
         dayTemp: dayTemprature,
-        dayImg:chooseImage("day",dayText),
         nightText: nightText,
         nightTemp: nightTemprature,
-        nightImg:chooseImage("night",nightText),
       });
       console.log(result);
     } catch (error) {
@@ -88,75 +85,6 @@ function App() {
   const handleChooseCity = (el) => {
     setSelectedCity(`${el.city}, ${el.country}`);
   };
-  const chooseImage = (time, conditionText) => {
-    const text = conditionText.toLocaleLowerCase()
-    if (text.includes("thunder")) {
-      setCondition("thunder");
-    } else if (text.includes("wind") || text.includes("blow")) {
-      setCondition("wind");
-    } else if (text.includes("rain")) {
-      setCondition("rain");
-    } else if (
-      text.includes("snow") ||
-      text.includes("ice") ||
-      text.includes("sleet") ||
-      text.includes("freez") ||
-      text.includes("blizzard")
-    ) {
-      setCondition("snow");
-    } else if (text.includes("fog") || text.includes("mist")) {
-      setCondition("fog");
-    } else if (text.includes("cloud") || text.includes("overcast")) {
-      setCondition("cloud");
-    } else if (
-      text.includes("sunny") ||
-      text.includes("clear") ||
-      text.includes("")
-    ) {
-      setCondition("sunny");
-    }
-
-    if (time === "day") {
-      switch (condition) {
-        case "rain":
-          return dayRain
-        case "snow":
-          return daySnow
-        case "wind":
-          return dayWind
-        case "fog":
-          return fog
-        case "cloud":
-          return dayCloud
-        case "sunny":
-          return sunImg
-        case "thunder":
-          return dayThunder
-        default:
-          return sunImg
-      }
-    }
-    else{
-      switch (condition) {
-        case "rain":
-          return nightRain
-        case "snow":
-          return nightSnow
-        case "wind":
-          return nightWind
-        case "fog":
-          return fog
-        case "cloud":
-          return nightCloud
-        case "sunny":
-          return moonImg
-        case "thunder":
-          return nightThunder
-          default:
-            return moonImg
-      }
-    }
-  };
 
   useEffect(() => {
     getWeather();
@@ -166,27 +94,30 @@ function App() {
   }, []);
 
   return (
-    <>
+    <>{loader&&(<p>loading ...</p>)}
+    {!loader&&(
       <div className=" bg-gray-100 w-screen h-screen  rounded-3xl relative flex justify-center items-center">
-        <Background />
-        <WeatherInfoLeft
-          selectedCity={selectedCity}
-          sunImg={weather.dayImg}
-          weather={weather}
-        />
-        <WeatherInfoRight
-          selectedCity={selectedCity}
-          moonImg={weather.nightImg}
-          weather={weather}
-        />
-        <SearchSection
-          onChange={onChange}
-          handleChooseCity={handleChooseCity}
-          selectedCity={selectedCity}
-          searchValue={searchValue}
-          filteredCities={filteredCities}
-        />
-      </div>
+      <Background />
+      <WeatherInfoLeft
+        selectedCity={selectedCity}
+        sunImg={sunImg}
+        weather={weather}
+      />
+      <WeatherInfoRight
+        selectedCity={selectedCity}
+        moonImg={moonImg}
+        weather={weather}
+      />
+      <SearchSection
+        onChange={onChange}
+        handleChooseCity={handleChooseCity}
+        selectedCity={selectedCity}
+        searchValue={searchValue}
+        filteredCities={filteredCities}
+      />
+    </div>
+    )}
+      
     </>
   );
 }
