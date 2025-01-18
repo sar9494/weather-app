@@ -14,12 +14,6 @@ function App() {
   const [loader, setLoader] = useState(false);
   const weatherApiKey = "42b6f46c05a04431b28103643251501";
 
-  const convertData = (data) => {
-    const citiesAndCountries = data.flatMap((el) =>
-      el.cities.map((city) => ({ city: city, country: el.country }))
-    );
-    return citiesAndCountries;
-  };
   const getCities = async () => {
     try {
       const response = await fetch(
@@ -31,6 +25,12 @@ function App() {
     } catch (error) {
       console.log(error);
     }
+  };
+  const convertData = (data) => {
+    const citiesAndCountries = data.flatMap((el) =>
+      el.cities.map((city) => ({ city: city, country: el.country }))
+    );
+    return citiesAndCountries;
   };
   const getWeather = async () => {
     try {
