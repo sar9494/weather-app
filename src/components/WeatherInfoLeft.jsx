@@ -9,7 +9,7 @@ import daySnow from "../images/daySnow.png";
 import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
 const WeatherInfoLeft = (props) => {
-  const { selectedCity, weather } = props;
+  const { selectedCity, weather ,allCities,setSelectedCity} = props;
   const chooseImage = () => {
     let image = "";
     const text = weather?.dayText?.toLowerCase();
@@ -47,8 +47,7 @@ const WeatherInfoLeft = (props) => {
       <div className=" w-full h-screen rounded-l-3xl flex justify-center items-center relative">
         <div className="w-[410px] h-[750px] rounded-3xl relative">
           <Ball className="absolute  -top-14 -left-14" color={"orange"} />
-          <div className="w-full h-full bg-white rounded-3xl bg-opacity-75 flex justify-center items-center flex-col gap-5 absolute backdrop-blur-sm ">
-            
+          <div className="w-full h-full bg-white rounded-3xl bg-opacity-75 flex justify-center items-center flex-col gap-5 absolute backdrop-blur-sm "> 
             <Header selectedCity={selectedCity} textColor={"black"}/>
             <img className="w-[263px] h-[263px]" src={chooseImage()} alt="" />
             <p className="text-transparent bg-clip-text font-extrabold text-[110px]  bg-gradient-to-b from-black to-white">
@@ -57,13 +56,10 @@ const WeatherInfoLeft = (props) => {
                 o
               </sup>
             </p>
-            <p
-              className="text-yellow-500 w-full text-left px-[40px] text-xl"
-              onClick={chooseImage}
-            >
+            <p className="text-yellow-500 w-full text-left px-[40px] text-xl" >
               {weather.dayText}
             </p>
-            <Footer color={"#4B5563"} />
+            <Footer color={"#4B5563"} weather={weather} selectedCity={selectedCity} allCities={allCities} setSelectedCity={setSelectedCity}/>
           </div>
         </div>
       </div>

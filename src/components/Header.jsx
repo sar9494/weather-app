@@ -6,7 +6,7 @@ const Header = (props) =>{
     <div>
       <p className="text-gray-400">{moment().format("LL")}</p>
       <p className="h-fit w-[280px] text-5xl font-extrabold p-0 m-0" style={{color:textColor}}>
-        {selectedCity}
+        {selectedCity.city}
       </p>
     </div>
     <Location />

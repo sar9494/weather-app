@@ -11,7 +11,7 @@ const SearchSection = (props) => {
   } = props;
 
   const handleChooseCity = (el) => {
-    setSelectedCity(`${el.city}`);
+    setSelectedCity({city:el.city,country:el.country});
     setSearchValue("")
   };
   const onChange = (e) => {

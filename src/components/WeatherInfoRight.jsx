@@ -10,7 +10,7 @@ import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
 
 const WeatherInfoRight = (props) => {
-  const { selectedCity, weather } = props;
+  const { selectedCity, weather,allCities ,setSelectedCity} = props;
   const chooseImage = () => {
     let image = "";
     const text = weather?.nightText?.toLocaleLowerCase();
@@ -60,7 +60,7 @@ const WeatherInfoRight = (props) => {
             <p className="text-indigo-500 w-full text-left px-[40px] text-xl">
               {weather.nightText}
             </p>
-            <Footer color={"white"} />
+            <Footer color={"white"} weather={weather} selectedCity={selectedCity} allCities={allCities} setSelectedCity={setSelectedCity}/>
           </div>
         </div>
       </div>
