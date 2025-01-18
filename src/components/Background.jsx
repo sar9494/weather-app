@@ -1,5 +1,5 @@
-import logoR from "./VectorR.png";
-import logoL from "./logoL.png";
+import logoR from "../images/logoR.png";
+import logoL from "../images/logoL.png";
 const Background = () => {
   return (
     <>

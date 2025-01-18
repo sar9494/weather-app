@@ -3,10 +3,29 @@ import Location from "../icons/Location.jsx";
 const SearchSection = (props) => {
   const {
     searchValue,
-    onChange,
-    handleChooseCity,
+    setSearchValue,
+    setSelectedCity,
+    allCities,
+    setFilteredCities,
     filteredCities,
   } = props;
+
+  const handleChooseCity = (el) => {
+    setSelectedCity(`${el.city}`);
+    setSearchValue("")
+  };
+  const onChange = (e) => {
+    setSearchValue(e.target.value);
+    const filtered = allCities.filter((el) => {
+      return (
+        el.city
+          .toLocaleLowerCase()
+          .startsWith(e.target.value.toLocaleLowerCase())
+      );
+    });
+    setFilteredCities(filtered);
+  };
+
   return (
     <div className="absolute w-[400px] h-fit top-12  flex justify-center items-center rounded-3xl flex-col gap-3">
       <div className="w-[400px] h-fit bg-white flex justify-center items-center rounded-3xl">
