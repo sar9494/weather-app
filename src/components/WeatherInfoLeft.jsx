@@ -15,7 +15,6 @@ const Ball = () => {
       width={128}
       height={128}
       fill="none"
-      {...props}
     >
       <circle cx={64} cy={64} r={64} fill={"green"} />
       <circle
