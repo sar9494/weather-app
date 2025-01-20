@@ -1,5 +1,5 @@
-import * as React from "react"
-const Ball = (props) => (
+import * as React from "react";
+export const Ball = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={128}
@@ -32,5 +32,4 @@ const Ball = (props) => (
       </radialGradient>
     </defs>
   </svg>
-)
-export default Ball
+);

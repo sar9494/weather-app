@@ -1,6 +1,6 @@
 import logoR from "../images/logoR.png";
 import logoL from "../images/logoL.png";
-const Background = () => {
+export const Background = () => {
   return (
     <>
       <div className="bg-gray-100  h-full rounded-l-3xl flex flex-1 justify-center items-center absolute"></div>
@@ -25,4 +25,3 @@ const Background = () => {
     </>
   );
 };
-export default Background

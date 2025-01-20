@@ -1,6 +1,5 @@
-import Search from "../icons/Search.jsx";
-import Location from "../icons/Location.jsx";
-const SearchSection = (props) => {
+import { Location, Search } from "../icons";
+export const SearchSection = (props) => {
   const {
     searchValue,
     setSearchValue,
@@ -55,4 +54,3 @@ const SearchSection = (props) => {
     </div>
   );
 };
-export default SearchSection;

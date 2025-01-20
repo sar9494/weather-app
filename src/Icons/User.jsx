@@ -1,5 +1,5 @@
-import * as React from "react"
-const User = (props) => (
+import * as React from "react";
+export const User = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={32}
@@ -18,5 +18,4 @@ const User = (props) => (
       d="M15 9a1 1 0 1 0 2 0 1 1 0 1 1 2 0 3 3 0 1 1-6 0 1 1 0 1 1 2 0Z"
     />
   </svg>
-)
-export default User
+);

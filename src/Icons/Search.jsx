@@ -1,5 +1,5 @@
-import * as React from "react"
-const Search = (props) => (
+import * as React from "react";
+export const Search = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={48}
@@ -13,5 +13,4 @@ const Search = (props) => (
       opacity={0.2}
     />
   </svg>
-)
-export default Search
+);

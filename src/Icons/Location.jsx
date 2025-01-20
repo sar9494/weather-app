@@ -1,5 +1,5 @@
-import * as React from "react"
-const Location = (props) => (
+import * as React from "react";
+export const Location = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={32}
@@ -24,5 +24,4 @@ const Location = (props) => (
       strokeWidth={2}
     />
   </svg>
-)
-export default Location
+);

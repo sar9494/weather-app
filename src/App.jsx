@@ -1,15 +1,20 @@
 import { useState, useEffect } from "react";
-import Background from "./components/Background.jsx";
-import WeatherInfoLeft from "./components/WeatherInfoLeft.jsx";
-import SearchSection from "./components/SearchSection.jsx";
-import WeatherInfoRight from "./components/WeatherInfoRight.jsx";
-import Loading_Page from "./components/Loading_Page.jsx";
+import {
+  WeatherInfoLeft,
+  WeatherInfoRight,
+  Background,
+  SearchSection,
+  Loading_Page,
+} from "./components";
 
 function App() {
   const [searchValue, setSearchValue] = useState("");
   const [filteredCities, setFilteredCities] = useState([]);
   const [allCities, setAllCities] = useState([]);
-  const [selectedCity, setSelectedCity] = useState({city:"Ulaanbaatar", country:"Mongolia"});
+  const [selectedCity, setSelectedCity] = useState({
+    city: "Ulaanbaatar",
+    country: "Mongolia",
+  });
   const [weather, setWeather] = useState({});
   const [loader, setLoader] = useState(false);
   const weatherApiKey = "42b6f46c05a04431b28103643251501";
@@ -43,8 +48,7 @@ function App() {
       const nightText = result.forecast.forecastday[0].hour[22].condition.text;
       const dayTemprature = result.forecast.forecastday[0].hour[10].temp_c;
       const dayText = result.forecast.forecastday[0].hour[10].condition.text;
-      const airQuality =
-        result.current.air_quality.pm2_5;
+      const airQuality = result.current.air_quality.pm2_5;
 
       setWeather({
         dayText: dayText,
@@ -60,7 +64,7 @@ function App() {
     }
   };
   //snow cloudy sunny clear rain overcast mist fog blow thunder ice,sleet,blizzard(snow) freez
-  
+
   useEffect(() => {
     getWeather();
   }, [selectedCity]);
@@ -81,8 +85,18 @@ function App() {
         )}
         {!loader && (
           <>
-            <WeatherInfoLeft selectedCity={selectedCity} weather={weather} allCities={allCities} setSelectedCity={setSelectedCity}/>
-            <WeatherInfoRight selectedCity={selectedCity} weather={weather} allCities={allCities} setSelectedCity={setSelectedCity}/>
+            <WeatherInfoLeft
+              selectedCity={selectedCity}
+              weather={weather}
+              allCities={allCities}
+              setSelectedCity={setSelectedCity}
+            />
+            <WeatherInfoRight
+              selectedCity={selectedCity}
+              weather={weather}
+              allCities={allCities}
+              setSelectedCity={setSelectedCity}
+            />
             <SearchSection
               setSearchValue={setSearchValue}
               setSelectedCity={setSelectedCity}

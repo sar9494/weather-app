@@ -1,5 +1,5 @@
-import * as React from "react"
-const Home = (props) => (
+import * as React from "react";
+export const Home = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={32}
@@ -26,5 +26,4 @@ const Home = (props) => (
       </linearGradient>
     </defs>
   </svg>
-)
-export default Home
+);
