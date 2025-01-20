@@ -58,13 +58,13 @@ export const WeatherInfoRight = (props) => {
           <p className="text-indigo-500 w-full text-left px-[40px] text-xl">
             {weather.nightText}
           </p>
-          <Footer
+          {/* <Footer
             color={"white"}
             weather={weather}
             selectedCity={selectedCity}
             allCities={allCities}
             setSelectedCity={setSelectedCity}
-          />
+          /> */}
         </div>
       </div>
     </div>

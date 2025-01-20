@@ -60,13 +60,13 @@ export const WeatherInfoLeft = (props) => {
           <p className="text-yellow-500 w-full text-left px-[40px] text-xl">
             {weather.dayText}
           </p>
-          <Footer
+          {/* <Footer
             color={"#4B5563"}
             weather={weather}
             selectedCity={selectedCity}
             allCities={allCities}
             setSelectedCity={setSelectedCity}
-          />
+          /> */}
         </div>
       </div>
     </div>
