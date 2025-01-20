@@ -1,6 +1,6 @@
 import * as React from "react";
-export const Ball = (props) => (
-  <svg
+export const Ball = (props) => {
+ return (<svg
     xmlns="http://www.w3.org/2000/svg"
     width={128}
     height={128}
@@ -31,5 +31,5 @@ export const Ball = (props) => (
         <stop offset={1} stopColor="#fff" stopOpacity={0} />
       </radialGradient>
     </defs>
-  </svg>
-);
+  </svg>)
+}

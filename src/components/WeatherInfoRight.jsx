@@ -6,7 +6,7 @@ import nightRain from "../images/nightRain.png";
 import nightThunder from "../images/nightThunder.png";
 import nightSnow from "../images/nightSnow.png";
 import { Footer, Header } from "./";
-import { Ball } from "../icons";
+import { Ball } from "./icons";
 // import { Ball } from "../icons";
 
 export const WeatherInfoRight = (props) => {
