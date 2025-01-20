@@ -1,4 +1,4 @@
-import { Location, Search } from "../icons";
+// import { Location, Search } from "../icons";
 export const SearchSection = (props) => {
   const {
     searchValue,
