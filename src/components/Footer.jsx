@@ -1,4 +1,4 @@
-import { Location, Home, Heart, User } from "../icons";
+// import { Location, Home, Heart, User } from "../icons";
 import { useState } from "react";
 export const Footer = (props) => {
   const { weather, selectedCity, allCities, setSelectedCity } = props;
