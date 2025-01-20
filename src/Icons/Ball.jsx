@@ -7,7 +7,7 @@ export const Ball = (props) => (
     fill="none"
     {...props}
   >
-    <circle cx={64} cy={64} r={64} fill={props.color} />
+    <circle cx={64} cy={64} r={64} fill={"green"} />
     <circle
       cx={64}
       cy={64}
