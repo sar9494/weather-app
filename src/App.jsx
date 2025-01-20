@@ -45,8 +45,6 @@ function App() {
       const dayText = result.forecast.forecastday[0].hour[10].condition.text;
       const airQuality =
         result.current.air_quality.pm2_5;
-      console.log(result);
-      console.log(airQuality);
 
       setWeather({
         dayText: dayText,
