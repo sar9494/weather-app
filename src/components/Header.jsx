@@ -1,4 +1,4 @@
-import { Location } from "../icons";
+// import { Location } from "../icons";
 import moment from "moment";
 export const Header = (props) => {
   const { selectedCity, textColor } = props;
