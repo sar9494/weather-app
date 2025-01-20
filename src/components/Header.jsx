@@ -13,7 +13,7 @@ export const Header = (props) => {
           {selectedCity.city}
         </p>
       </div>
-      <Location />
+      {/* <Location /> */}
     </div>
   );
 };
