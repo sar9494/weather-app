@@ -6,7 +6,7 @@ import dayRain from "../images/dayRain.png";
 import dayThunder from "../images/dayThunder.png";
 import daySnow from "../images/daySnow.png";
 import { Footer, Header } from "./";
-import { Ball } from "../icons";
+// import { Ball } from "../icons";
 
 export const WeatherInfoLeft = (props) => {
   const { selectedCity, weather, allCities, setSelectedCity } = props;
