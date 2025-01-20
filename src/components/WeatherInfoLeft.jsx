@@ -6,7 +6,6 @@ import dayRain from "../images/dayRain.png";
 import dayThunder from "../images/dayThunder.png";
 import daySnow from "../images/daySnow.png";
 import { Footer, Header } from "./";
-// import { Ball } from "../icons";
 
 const Ball = () => {
   return (
