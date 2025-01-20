@@ -6,8 +6,7 @@ import nightRain from "../images/nightRain.png";
 import nightThunder from "../images/nightThunder.png";
 import nightSnow from "../images/nightSnow.png";
 import { Footer, Header } from "./";
-import { Ball } from "./icons";
-// import { Ball } from "../icons";
+import { Ball } from "../icons";
 
 export const WeatherInfoRight = (props) => {
   const { selectedCity, weather, allCities, setSelectedCity } = props;
@@ -46,8 +45,7 @@ export const WeatherInfoRight = (props) => {
   return (
     <div className=" w-full h-screen rounded-r-3xl flex justify-center items-center relative ">
       <div className="w-[410px] h-[750px]  rounded-3xl relative ">
-        {/* <Ball className="absolute -bottom-14 -right-14" color={"#6E72C9"} /> */}
-        <Ball/>
+        <Ball className="absolute -bottom-14 -right-14" color={"#6E72C9"} />
         <div className="w-full h-full bg-gray-950 rounded-3xl bg-opacity-75 backdrop-blur-sm flex justify-center items-center flex-col gap-5">
           <Header textColor={"white"} selectedCity={selectedCity} />
           <img className="w-[263px] h-[263px]" src={chooseImage()} alt="" />
@@ -60,13 +58,13 @@ export const WeatherInfoRight = (props) => {
           <p className="text-indigo-500 w-full text-left px-[40px] text-xl">
             {weather.nightText}
           </p>
-          {/* <Footer
+          <Footer
             color={"white"}
             weather={weather}
             selectedCity={selectedCity}
             allCities={allCities}
             setSelectedCity={setSelectedCity}
-          /> */}
+          />
         </div>
       </div>
     </div>

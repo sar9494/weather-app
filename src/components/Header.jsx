@@ -1,4 +1,4 @@
-// import { Location } from "../icons";
+import { Location } from "../icons";
 import moment from "moment";
 export const Header = (props) => {
   const { selectedCity, textColor } = props;
@@ -13,7 +13,7 @@ export const Header = (props) => {
           {selectedCity.city}
         </p>
       </div>
-      {/* <Location /> */}
+      <Location />
     </div>
   );
 };

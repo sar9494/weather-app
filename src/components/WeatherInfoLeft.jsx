@@ -6,42 +6,7 @@ import dayRain from "../images/dayRain.png";
 import dayThunder from "../images/dayThunder.png";
 import daySnow from "../images/daySnow.png";
 import { Footer, Header } from "./";
-
-const Ball = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={128}
-      height={128}
-      fill="none"
-    >
-      <circle cx={64} cy={64} r={64} fill={"green"} />
-      <circle
-        cx={64}
-        cy={64}
-        r={64}
-        fill="url(#a)"
-        fillOpacity={0.35}
-        style={{
-          mixBlendMode: "overlay",
-        }}
-      />
-      <defs>
-        <radialGradient
-          id="a"
-          cx={0}
-          cy={0}
-          r={1}
-          gradientTransform="matrix(0 64 -64 0 64 64)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#fff" />
-          <stop offset={1} stopColor="#fff" stopOpacity={0} />
-        </radialGradient>
-      </defs>
-    </svg>
-  );
-};
+import { Ball } from "../icons";
 
 export const WeatherInfoLeft = (props) => {
   const { selectedCity, weather, allCities, setSelectedCity } = props;
@@ -82,8 +47,7 @@ export const WeatherInfoLeft = (props) => {
   return (
     <div className=" w-full h-screen rounded-l-3xl flex justify-center items-center relative">
       <div className="w-[410px] h-[750px] rounded-3xl relative">
-        {/* <Ball className="absolute  -top-14 -left-14" color={"orange"} /> */}
-        {Ball()}
+        <Ball className="absolute  -top-14 -left-14" color={"orange"} />
         <div className="w-full h-full bg-white rounded-3xl bg-opacity-75 flex justify-center items-center flex-col gap-5 absolute backdrop-blur-sm ">
           <Header selectedCity={selectedCity} textColor={"black"} />
           <img className="w-[263px] h-[263px]" src={chooseImage()} alt="" />
@@ -96,17 +60,16 @@ export const WeatherInfoLeft = (props) => {
           <p className="text-yellow-500 w-full text-left px-[40px] text-xl">
             {weather.dayText}
           </p>
-          {/* <Footer
+          <Footer
             color={"#4B5563"}
             weather={weather}
             selectedCity={selectedCity}
             allCities={allCities}
             setSelectedCity={setSelectedCity}
-          /> */}
+          />
         </div>
       </div>
     </div>
   );
 };
 
-// export default WeatherInfoLeft;

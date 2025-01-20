@@ -1,4 +1,4 @@
-// import { Location, Search } from "../icons";
+import { Location, Search } from "../icons";
 export const SearchSection = (props) => {
   const {
     searchValue,
@@ -26,7 +26,7 @@ export const SearchSection = (props) => {
   return (
     <div className="absolute w-[400px] h-fit top-12  flex justify-center items-center rounded-3xl flex-col gap-3">
       <div className="w-[400px] h-fit bg-white flex justify-center items-center rounded-3xl">
-        {/* <Search /> */}
+        <Search />
         <input
           type="text"
           className=" top-0 p-5 w-[300px] text-2xl outline-none text-gray-400 rounded-3xl"
@@ -43,7 +43,7 @@ export const SearchSection = (props) => {
               className="flex w-full justify-start items-center"
               onClick={() => handleChooseCity(el)}
             >
-              {/* <Location /> */}
+              <Location />
               <p className=" p-5 rounded-3xl">
                 {el.city},{el.country}
               </p>

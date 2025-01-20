@@ -1,4 +1,4 @@
-// import { Location, Home, Heart, User } from "../icons";
+import { Location, Home, Heart, User } from "../icons";
 import { useState } from "react";
 export const Footer = (props) => {
   const { weather, selectedCity, allCities, setSelectedCity } = props;
@@ -10,25 +10,25 @@ export const Footer = (props) => {
   const { color } = props;
   return (
     <div className="flex gap-10 realitive justify-center items-center h-fit">
-      {/* <Home color={color} /> */}
+      <Home color={color} />
       <div
         onMouseEnter={() => hoverHandler("heart")}
         onMouseLeave={() => hoverHandler("")}
       >
-        {/* <Heart /> */}
+        <Heart />
       </div>
       <div
         onMouseEnter={() => hoverHandler("location")}
         onMouseLeave={() => hoverHandler("")}
       >
-        {/* <Location /> */}
+        <Location />
       </div>
       <div
         onClick={() =>
           setSelectedCity({ city: "Ulaanbaatar", country: "Mongolia" })
         }
       >
-        {/* <User /> */}
+        <User />
       </div>
       {isHover == "heart" && (
         <div

@@ -1,6 +1,6 @@
 import * as React from "react";
-export const Location = (props) => (
-  <svg
+export const Location = (props) => {
+    return <svg
     xmlns="http://www.w3.org/2000/svg"
     width={32}
     height={32}
@@ -24,4 +24,4 @@ export const Location = (props) => (
       strokeWidth={2}
     />
   </svg>
-);
+  }
