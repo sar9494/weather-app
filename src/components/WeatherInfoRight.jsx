@@ -45,7 +45,7 @@ export const WeatherInfoRight = (props) => {
   return (
     <div className=" w-full h-screen rounded-r-3xl flex justify-center items-center relative ">
       <div className="w-[410px] h-[750px]  rounded-3xl relative ">
-        <Ball className="absolute -bottom-14 -right-14" color={"#6E72C9"} />
+        {/* <Ball className="absolute -bottom-14 -right-14" color={"#6E72C9"} /> */}
         <div className="w-full h-full bg-gray-950 rounded-3xl bg-opacity-75 backdrop-blur-sm flex justify-center items-center flex-col gap-5">
           <Header textColor={"white"} selectedCity={selectedCity} />
           <img className="w-[263px] h-[263px]" src={chooseImage()} alt="" />

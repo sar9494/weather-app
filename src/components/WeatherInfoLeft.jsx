@@ -47,7 +47,7 @@ export const WeatherInfoLeft = (props) => {
   return (
     <div className=" w-full h-screen rounded-l-3xl flex justify-center items-center relative">
       <div className="w-[410px] h-[750px] rounded-3xl relative">
-        <Ball className="absolute  -top-14 -left-14" color={"orange"} />
+        {/* <Ball className="absolute  -top-14 -left-14" color={"orange"} /> */}
         <div className="w-full h-full bg-white rounded-3xl bg-opacity-75 flex justify-center items-center flex-col gap-5 absolute backdrop-blur-sm ">
           <Header selectedCity={selectedCity} textColor={"black"} />
           <img className="w-[263px] h-[263px]" src={chooseImage()} alt="" />
