@@ -1,4 +1,4 @@
-import Search from "../icons/Search.jsx";
+// import Search from "../icons/Search.jsx";
 import Location from "../icons/Location.jsx";
 const SearchSection = (props) => {
   const {
@@ -29,7 +29,7 @@ const SearchSection = (props) => {
   return (
     <div className="absolute w-[400px] h-fit top-12  flex justify-center items-center rounded-3xl flex-col gap-3">
       <div className="w-[400px] h-fit bg-white flex justify-center items-center rounded-3xl">
-        <Search />
+        {/* <Search /> */}
         <input
           type="text"
           className=" top-0 p-5 w-[300px] text-2xl outline-none text-gray-400 rounded-3xl"
