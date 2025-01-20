@@ -1,4 +1,4 @@
-// import Search from "../icons/Search.jsx";
+import Search from "../icons/Search.jsx";
 import Location from "../icons/Location.jsx";
 const SearchSection = (props) => {
   const {
@@ -11,17 +11,15 @@ const SearchSection = (props) => {
   } = props;
 
   const handleChooseCity = (el) => {
-    setSelectedCity({city:el.city,country:el.country});
-    setSearchValue("")
+    setSelectedCity({ city: el.city, country: el.country });
+    setSearchValue("");
   };
   const onChange = (e) => {
     setSearchValue(e.target.value);
     const filtered = allCities.filter((el) => {
-      return (
-        el.city
-          .toLocaleLowerCase()
-          .startsWith(e.target.value.toLocaleLowerCase())
-      );
+      return el.city
+        .toLocaleLowerCase()
+        .startsWith(e.target.value.toLocaleLowerCase());
     });
     setFilteredCities(filtered);
   };
@@ -29,7 +27,7 @@ const SearchSection = (props) => {
   return (
     <div className="absolute w-[400px] h-fit top-12  flex justify-center items-center rounded-3xl flex-col gap-3">
       <div className="w-[400px] h-fit bg-white flex justify-center items-center rounded-3xl">
-        {/* <Search /> */}
+        <Search />
         <input
           type="text"
           className=" top-0 p-5 w-[300px] text-2xl outline-none text-gray-400 rounded-3xl"
@@ -46,7 +44,7 @@ const SearchSection = (props) => {
               className="flex w-full justify-start items-center"
               onClick={() => handleChooseCity(el)}
             >
-                <Location/>
+              <Location />
               <p className=" p-5 rounded-3xl">
                 {el.city},{el.country}
               </p>
